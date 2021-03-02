@@ -1,0 +1,246 @@
+---
+title: "Reproduce Your Research"
+author: "Daniel Antal, CFA"
+date: "7/28/2020"
+output:
+  revealjs::revealjs_presentation:
+    transition: slide
+    css: styles3.css
+    self-contained: true
+    center: false
+    bibliography: antal.bib
+    fig_width: 7
+    fig_height: 3.5
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message=FALSE, warnings=FALSE, fig.align='center')
+library(knitr);library(kableExtra)
+library(ggplot2); library(tidyr); library(dplyr); library(sf)
+source("plot_europe_sf.R")
+#source("fill_forecast.R")
+load (file.path("data", "example_indicators.rda"))
+```
+
+# Overview
+
+- [Aim: Why Reproduce Your Research?&#11208;](#aim): If you have downloaded the same file twice, requested data from the same API twice, reformatted a table twice, created a chart twice, it is time that an app learns how to do this automatically for you anytime the data changes on the website, in the database or in the API. The data and its presentation should always be present in the most recent form and all changes should be documented automatically.  [Directly to the reproducible research definition&#11208;&#11208;](#repr-research)
+
+- [What: Products & Services&#11208;&#11208;](#products): We are making lightweight, not-compiled, risk-free, open-source, platform-independent, transparent apps that automate your repeating tasks in data collection, data processing, data analysis and presentation.
+
+- [Why: Benefits of Reproducible Research &#11208;&#11208;](#benefits) We can cut out hundreds of wasted data collection and processing hours from your research or consulting workflow, and make boring, errorprone and labor-intensive documentation, quality control and audit functions automatic. This allows junior research staff and senior supervisors and to concentrate on their work where humans are much better than robots and algorithms.
+
+- [Integrate & Collaborate: Data observatories &#11208;&#11208;](#observatory): By automatic documentation you can far more easily integrate new team members, and re-visit old projects. You can also integrate your data with billions of euros worth open data that the EU made publicly available, but of course, did not pre-process for your needs.
+
+- In each topic you can go deeper with pressing &#11206; on your keyboard, touchpad or on the screen - we offer more arguments, examples, visualizations. You can jump to the next main topic with the [&#11208;](#aims) arrow on your keyboard or on the screen or by clicking the highlighted blue text. The [Contact & Team Info&#11208;&#11208;](#team)
+[Open-source software&#11208;&#11208;](#oss); [Reproducible research examples&#11208;&#11208;](#examples); [Prospective clients&#11208;&#11208;](#examples) are at the end of the presentation.
+
+## Navigation help
+
+- For the [Overview&#11205;](#overview) there are no further details.
+
+- The main topics are [Aim: Why Reproduce Your Research?&#11208;](#aim)  &#129042; [What: Products & Services&#11208;&#11208;](#products) &#129042; [Why: Benefits of Reproducible Research &#11208;&#11208;](#benefits)  &#129042; [Integrate & Collaborate: Data observatories &#11208;&#11208;](#observatory)
+
+- The [Contact & Team Info&#11208;&#11208;](#team) &#129042;
+[Open-source software&#11208;&#11208;](#oss) &#129042; [Reproducible research examples&#11208;&#11208;](#examples) &#129042; [Prospective clients&#11208;&#11208;](#examples) are at the end of the presentation.
+
+<!-------------------  AIM 1 SLIDES  ----------------------> 
+
+<!--- Up: "&#11205"; Down: "&#11206"; Left: "&#11207"; Right: "&#11208" ---->
+
+
+# Why Reproduce Your Research? {#aims}
+
+- External data sources, such as Eurostat's data tables, or Spotify's API about recording data or Google Trends for searching patterns changes all the time. If you need them regularly, you benefit from an app that downloads the data into Excel, CSV, SPSS or other files in the same, tidy structure, does currencly translations, interpolations and other processing exactly the same and professional way. [&#11206; Data Ingestions Apps](#dataingest) 
+
+- Making correct currency translations with average and spot rates, making sure that unit conversion are correct, missing data is correctly interpolated requires statistical and financial know-how and can be automated. [&#11206; Data processing](#dataprocess)
+
+- Putting your data into context by adding historical data from the past, comparative data from other countries or organizations adds insight to your existing data. [&#11206; Data integration](#dataintegration)
+
+- Automating pre-modelling steps allows you to assemble large-enough and well standardized data pools to exploit the benefits of AI, machine learning or deep learning. [&#11206; AI & Machine learning pre-modelling](#tidymodels)
+
+- Automating research presentation makes your research work more timely and saves error-prone manual work. [&#11206; Automated documentation](#presentation) [&#10226;Back to Overview](#overview)	&#9480;[Forward to Products & Services&#11208;](#products) 
+
+## Data Ingestion {#dataingest}
+
+- Our apps automatically monitor external data sources, and whenever data is corrected, refreshed or redefined, we download the change, document it, and make the new data version available for your team immediately. We can also automate the updates of technical annexes, bibliographic references, tables, charts, dashboards with the new data. [&#11206; Data Ingestions Apps](#aims) 
+
+## Data Processing {#dataprocess}
+
+- The statistical concept of tidy data is data that is ready to insert into a relational database, imputed into a statistical software, a spreadsheet application or easily joins with other data. All variables are in columns, all observations are in rows, and everything is correctly named. Junior staff spends almost 80% of their work on making data from external sources and internal databases tidy. Our apps do this automatically, and well. 
+
+- Data processing involves unit conversions (thousands of euros, millions of euros), currency translations (dollar to euro, average and spot rates), and missing data handling (extrapolation, interpolation, backcasting, forecasting.)  We automate these highly error-prone and labor intensive tasks professionally.
+
+## Data Integration {#dataintegration}
+
+- We place such a large emphasis on ingesting perfectly formatted, processed and documented data, because they can be seamlessly integrated with your internal resources: your own internal databases, data subscriptions, archives.
+
+- Our data integration apps ("observatories") bring in new data, opening up open data, and join them locally with your own, pre-existing data. This will exponentially increase the evidence, facts, information and data available for your internal researchers and consultants.
+
+## Model Pre-Processing {#tidymodels}
+
+- If you want to exploit the benefits of machine learning, AI, and reproducible research in general, you need "big data", or at least much more correctly processed data to reveal new insights. 
+
+- By embracing the tidymodels concept, we can automate the standardization and variable or model preselection, offering the best model candidates from tens of thousands of automatically built econometric, regression, machine learning or clustering models.  The tidymodel concept allows you to potentially connect to about 300 statistical model families on a single interface. 
+
+- While we believe that modelling in empirical business and scientic research requires human judgement, automated research systems can explore tens of thousands of paths for hidden insights to focus your researchers on the very best approaches.  
+
+- Automating modelling has the benefit that all research output is can be made self-documenting, and technical research reports, technical annexes, publication annexes can be produces error-free an automatically, relieving your research task from the most boring and hated element of the research workflow.
+
+## Research Presentation {#presentation}
+
+- The last benefit of reproducible, automated [&#11207; data ingestion](#dataingest), [&#11207; data processing](#dataprocess), [&#11207; data integration](#dataintegration) and [&#11207; tidy model preparation](#tidymodels) that all your visualizations, tables, bibliographies, data citations, can be updated in your research products, such as committee meeting presentations, research reports, newsletters.  
+
+## Summary {#summary}
+- Our vision is that instead of having thousands of Excel files in your organizations with various headers, file formats, and manual corrections, your organization should have access to automatically refreshing and perfectly processed Excel files all the time. [&#10226;Back to Overview](#overview)	&#9480;[Forward to Product &  Services&#11208;](#products)
+
+<!-------------------  2 PRODUCT SLIDES  ----------------------> 
+
+# Products & Services {#products}
+
+- We create open-source, non-compiled, lightweight, automated [&#11207; data ingestion](#dataingest), [&#11207; data processing](#dataprocess), [data integration](#dataintegration),  [&#11207; tidy model preparation](#tidymodels), [&#11207; data visualization](#presentation) applications in R and RShiny.  
+
+- We are not a software company. We use open source software [&#11208; &#11208; see examples](#oss) in an easily interpreted language, R, and its very SQL-like tidyverse libraries, which are supported by SPSS, Microsoft, and can be easily understood by your colleagues. They are free to even modify it, they are only not allowed to re-sell or re-use our code in commercial products.
+
+- We never take any data out of your systems. We are landing lightweight apps that can be opened from a browser, and ran outside of your organization in the cloud, or on your platforms in house, depending on your security approach.
+
+- We want to add value to your research workflow and be remunerated for our services in [automating your researcher's workflow](#workflow), finding new, often free information for your organization as [data curation](#datacuration), and leaving behind serviced apps that provide you with constantly with [data-as-service](#DaaS). [&#11207;Back to Overview](#overview)&#9480;[Forward to Benefits&#11208;](#benefits) 
+
+## Workflow automation {#workflow}
+
+- Daniel and Istvan each have 20 years of data-driven management and policy consulting experience. We fully understand how research-oriented organizations, such as management and policy consultancies, law firms, research institutes, NGOs or investment banks carry out their research. We would like to help your research team with automating their repeating, boring, error-prone task, and leave behind job aids, apps, reproducible templates that help them automatically repeat tasks. 
+
+- We do not work with sensors, IoT, and other data collected on physical infrastructure. We are specialized on financial, economic, market resaerch, statistical and legal data, or data from transport, media, meteorological system. Do you need sensor data? We can connect you with great tech startups in Holland. Do you need social and economic data? Get in touch with us.
+
+- We charge a management consulting fee workflow animation.
+
+## Data curation {#datacuration}
+
+- We are experts in open data and statistical data creation and presentation. 
+
+- We leave behind applications that automatically ingest the new data sources into your organization in correct form, correctly processed, and always on time.
+
+- We charge a management consulting fee for data curation. 
+
+## DaaS: data as service {#DaaS}
+
+- Our apps are fully open source, and they run on RShiny (commercial and free licenses are available.) We service them and deploy them via Docker. Whenever you need a software update, modification, we modify the app and make it accessible on a virtual computer to you, which you are free to run in the cloud or deploy locally.
+
+- If this sounds too complicated: we are servincing your apps, and you only need to open them in your browser.
+
+- We do not charge for working, but not maintained apps. If your team can service them in R, you will not be charged (but you can not re-sell our product.)
+
+- We charge a low monitoring fee, if it gives you comfort, or we charge for an ad hoc modification fee, whenever the data source changes (Eurostat changes its tables, Spotify give different data out in the API, Google Analyitcs changes structure, etc.) [&#10226;Back to Overview](#overview)&#9480;[Forward to Benefits&#11208;](#benefits)
+
+
+<!-------------------  3 BENEFITS SLIDES  ----------------------> 
+
+# Benefits of Reproducible Research {#benefits}
+
+- **Teamwork**:  There is no backlog with research documentation, new team members can easily connect to ongoing or long-archived projects. Assignment of tasks is easier as information assets are transparent.
+
+- **Focus on Content**: we make sure that the data is in the right form and is tidy. In organizations that do not have an in-house data science team, analysts and evidence-based consultants, especially on junior level, spend up to 80% of their working hours on data collection, processing and handling. 
+
+- **Timeliness**: Your research material is always up-to-date, reflects the latest, correctly translated, imputed, validated data.
+
+- **Free data**: Access to billion euros worth of [&#11206; EU open data](#opendata) --- with our know-how it can replace data vendors, market research surveys, and other costly data acquisitions.
+
+- **Research collaboration**: By standardizing data in form and in content, we allow non-competing organizations to form R&D Consortiums, syndicate surveys, and make beneficial data swaps.
+
+- **AI & Machine Learning**: In AI, machine learning, deep learning projects up to 90% of the working hours are connected to building data pipelines, processing and standardizing the data. Your analysts can embrace AI & Machine Learning by outsourcing non-existing in-house data science. 
+
+## Access to Open Data {#opendata}
+
+- The [EU Open Data Directive](https://satellitereport.com/reproducible/psi/) gives you theoretically access to billions of euros worth of survey data, economic, financial, judicial, meteorological, transport and other data for free. 
+
+- While PSI is generally free, or very cheap in the EU, the re-use of these information sources usually requires deep knowledge and further investment, given that these public information sources were never designed for the secondary public or commercial need.
+
+- We have made these investments over many years: we know where to find the data, how to process it, and how to make it useful for your organization. In our experience, open data can often replace costlier data acquisitions, or enhance the value of market research by providing a free international context or history. [See our blog post »»»](https://satellitereport.com/post/2020-07-10-retroharmonize/).
+
+## Formal Definition of Reproducible Research {#repr-research}
+
+- **Reviewability** means that our application’s results are can be assessed and judged by our user’s experts, or experts they trust. We not only automate data collection and cleaning, but we also automate documentation. *This is a key concept for quality control in a business, scientific or data journalism workflow.*
+
+- **Reproducibility** means that we are providing data products and tools that allow the exact duplication of our results during assessments. *This is usually a minimum standard for submitting evidence to clients, regulators, or for scientific peer-review.*
+
+- **Confirmability** means that using our applications findings leads to the same professional results as other available software and information. *Our findings are easy to reproduce with different means - we are transparent for external control and there is no technology lock in.*
+
+- **Auditability** means that our data and software is archived in a way that external auditors can later review, reproduce and confirm our findings. This is a stricter form of data retention that most organizations apply, because we do not only archive results step-by-step but all computational steps – as if your colleagues would not only save every step in Excel but also their keystrokes. *This is often a formal requisite bey professional bodies, market regulators, courts and supervisory boards.* [&#10226;Back to Overview](#overview)	&#9480;[Forward to Data Observatories&#11208;](#observatory)
+
+<!-------------------  4 INTEGRATION SLIDES  ----------------------> 
+
+# Data Observatories {#observatory}
+
+An **observatory is a location used for observing terrestrial or celestial events**. We are creating automated observatories following the best practices of reproducible research to observe social, economic, judicial, meteorological, transport or various transactional data for your work. The European Commission and the Council of Europe are supporting numerous data observatories to support research and development and evidence-based policymaking.  [See some observatories »»»](https://documentation.satellitereport.com/index.php?title=Observatory)
+
+- A **private observatory** is the data integration system of our apps and automated tool that collects external information, processes it and professionally joins it with internal data resources.
+
+- A **collaborative observatory** is a data integration system that has a map to collaborating institutions’s data resources, and is able to exploit their synergies by automatically combining their data, triggered by an authorization of all involved parties. We have been developing a music data observatory with more than 60 organization in 12 countries to provide the industry with rich data for audience predictions, export market discovery, royalty pricing, and evidence in court.
+
+- A **public observatory** is a collaborative observatory that intends to make at least some of its data assets available as open data. We are teaming up with industry leader scientific and business organizations to build European public observatories. [&#10226;Back to Overview](#overview)&#9480;[Forward to About Us&#11208;](#team)
+
+<!-------------------  5 TEAM SLIDES  ----------------------> 
+
+# About Us {#team}
+
+- [Daniel Antal, CFA](https://satellitereport.com/author/daniel/) is an experienced evidence-based management and policy consultant. He has been involved in open data for 18 years. He has been developing open source reproducible research software for several years now, applying it for reproducible evidence in competition law, royalty pricing, economic impact analysis, and other very data-intensive jobs.
+
+- [Reka Szentirmay](https://satellitereport.com/author/reka/) is a seasoned localization expert and a curator. She understands how to translate and localize information in an international context, and knows how to present complex information for a heterogeneous audience. She'll mainly work with our partners in data journalism and NGOs.
+
+- [Marta Kolczyńska, PhD](https://satellitereport.com/author/marta/) is an expert on survey harmonization and reproducible empirical research. She is a contributor to our research software and helps us tapping into pre-existing survey results in Europe, Africa and Latin-America. She'll mainly work with our partners in science.
+
+- [Istvan Zsoldos](https://satellitereport.com/author/istvan-zsoldos/) is a very experienced management consultant working in data-driven projects in various industries. He'll mainly work with our partners in business research and consulting.
+
+- See examples of [&#11206; our open-source software](#oss) 	&#129042; [&#11206; reproducible research documents](#examples) or  [&#10226;Back to Overview](#overview)	&#9480;[Forward to Prospective Clients&#11208;](#prospects)
+
+## Open Source Software {#oss}
+
+- [iotables](http://iotables.ceemid.eu/) processes national accounts data for all EU members states, and allows the creation of important economic impact assessment indicators, such as gross value added indicators, employment effects, tax effects for 60 industries in 28 EU countries. &#8212;
+- [regions](http://regions.danielantal.eu/) allows you to validate and convert data across about 20,000 sub-national (provincial, regional, departmental... ) boundary changes in Europe in the last 20 years. You can expand your comparators from 28 countries to several hundred smaller geographical units, which allows far more insights in policy and management consulting, and opens up new social scientific resources for discoveries. &#8212;
+- [retroharmonize](http://retroharmonize.satellitereport.com/) aims to give your ongoing market and policy research surveys a free international context and history by adding back the history of the same questions from the last 30 years in most European, African and Latin-American countries. We can help you creating surveys where you do not only know your your target group's answers, but also how the same target group answers in other countries, or how they have answered in the past.
+- [eurobarometer](http://eurobarometer.danielantal.eu/) will further automate the world's largest survey programs retroactive use from Europe. We are processing millions of high-quality interview transcripts into statistical data.
+
+## Reproducible Research Documents {#documents}
+
+-[Slovak Music Industry Report »»»](https://danielantal.eu/publication/slovak_music_industry_2019/) is a book-form empirical study, policy and business advocacy book where all data can automatically refreshed for later additions.  &#8212;
+
+- [Central European Music Industry Report »»»](http://ceereport2020.ceemid.eu/) is a case-study on national and comparative evidence-based policymaking in the cultural and creative sector, reproducibly including many industry, open data sources, and survey data from 12 countries. It was shown as a good example on the [CCS Ecosystems: FLIPPING THE ODDS Conference »»»](https://danielantal.eu/publication/ceereport_2020/) – a two-day high-level stakeholder event jointly organized by Geothe-Institute and the DG Education and Culture of the European Commission with the Creative FLIP project. The book can be refreshed in html, epub, PDF formats. 
+
+- [Private Copying in Croatia »»»](https://danielantal.eu/publication/private_copying_croatia_2019/) is an evidence based advocacy paper that reproducibly combines industry data, proprietary data, harmonized survey data and open data. It is a shorter, public version of our similar documents filed as evidence in copyright lawsuits.
+
+- [Blogpost: Reproducible data ingestion in practice »»»](https://satellitereport.com/post/2020-07-25-reproducible_ingestion/) and [blogpost: Increase the value of market research with open data and survey harmonization »»»](https://satellitereport.com/post/2020-07-10-retroharmonize/)
+
+- [Scientific example: Empirical Study on the Role of Shadow Libraries »»»](https://danielantal.eu/post/2020-07-03-open_access_books/)
+<!-------------------  PROSPECTIVE CLIENTS  ----------------------> 
+
+# Prospective Clients {#prospects}
+
+- We are trying to organizes our prospective clients around topical [data observatories](#observatory).  This means that we can curate the same data, process (roughly) the same data for potentially dozens of clients, and make synergies, eventually putting ourselves in a position that cannot be cut out.
+
+- With a leading research institute in a big Dutch university, and leading music distribution company in Europe we are aiming to build a music observatory.  This project has a 7-year history, and much of the observatory (with about 60 stakeholders) is ready.
+
+- We are in discussion with rather specialized, medium sized consultancies to start similar observatories in a) banking, b) creative industries. 
+
+- We hope that we can augment the services of consulting companies, and in exchange they are opening the doors for our data products in their clientele. These are large enough organizations to have internal needs, too.
+
+- Our prospects are usually willing to make contracts with us, or at least give Letters of Intent within weeks. [&#10226;Back to Overview](#overview)&#9480;[Forward to Contact&#11208;](#prospects)
+
+<!-------------------  CONTACT & MORE  ----------------------> 
+
+# Contact & More Info {#contact}
+
+```{r danielantal, echo=FALSE, fig.align='center'}
+knitr::include_graphics(file.path("plots", "closing_slide.png"))
+```
+
+Contact: [danielantal.eu](https://danielantal.eu/) - [linkedin](https://www.linkedin.com/in/antaldaniel/) - [github](https://github.com/antaldaniel) - [dataverse](https://dataverse.harvard.edu/dataverse/harvard?q=%28dvName%3ADaniel+dvName%3AAntal%29+OR+%28authorName%3ADaniel+authorName%3AAntal%29) 
+
+Topics: [royalty valuation](https://danielantal.eu/usecase/royalty_setting/) - [private copying](https://danielantal.eu/post/dsm_pcr_19/) - [grant design](https://danielantal.eu/project/grants/) - [policy advocacy](https://danielantal.eu/publication/slovak_music_industry_2019/) - [ceemid observatory](https://danielantal.eu/project/ceemid/)
+
+## Copyright Credits
+
+In this presentation Open data was used with open source software components. Detailed references in long-form publications for all software code used.
+
+- The European statistical maps:  [&#169; EuroGeographics](https://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units) for the administrative boundaries
+
+- Visualization: [&#169; Daniel Antal](https://danielantal.eu/), Satellite Report, 2020.

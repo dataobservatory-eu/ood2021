@@ -1,0 +1,132 @@
+---
+title: "Reprex Open Data Day 2021"
+date: "3/06/2021"
+output:
+  revealjs::revealjs_presentation:
+    transition: slide
+    css: styles3.css
+    self-contained: true
+    center: false
+    bibliography: antal.bib
+    fig_width: 7
+    fig_height: 3.5
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message=FALSE, warnings=FALSE, fig.align='center')
+library(knitr);library(kableExtra)
+library(ggplot2); library(tidyr); library(dplyr); library(sf)
+#source("plot_europe_sf.R")
+#source("fill_forecast.R")
+#load (file.path("data", "example_indicators.rda"))
+```
+
+# Reprex Open Data Day 2021 {#reprex}
+
+- `Open Data` is data that is freely available to everyone to use and republish without legal or other restrictions. The most important sources of open data are open science data connected to scientific activities that allow the replication of scientific achievements. In Europe, the re-use of public sector information, in other jurisdictions, freedom of information regulations make various public institutions' and taxpayer funded datasets available for reuse. Open data is a very important source of information for business, scientific and policy uses.
+
+- `Reproducible research`: The quality control of open data is focusing on reviewable, reproducible and confirmable findings.  Auditability is a requirement in most high-level business, scientific or policy applications. 
+
+- `Open Source`: In most cases, when the data processing code and procedure is not a well-documented, open-source algorithm, reproducibility and confirmability is limited, or impossible. 
+
+- In each topic you can go deeper with pressing [&#11206;](#try) on your keyboard, touchpad or on the screen - we offer more arguments, examples, visualizations. You can jump between or two topics [15.30 CET / 09.30 EST Open Collaboration With Open Data](#OOD) & [17.00 CET / 11.00 EST Open Data And Data Observatories](#observatories) and the [Blog posts](#blog) and [Participants](#contact) with the to the next main topic with the [&#11207; &#11208;](#OOD) arrow on your keyboard or on the screen or by clicking the highlighted blue text. 
+
+<!-------------------  AIM 1 SLIDES  ----------------------> 
+
+## Try Navigation {#try} 
+
+- Press [&#11205;](#reprex) to go back to the opening slide or [&#11208;](#OOD) to jump to the first topic. 
+
+<!-------------------  Open Collaboration  ----------------------> 
+
+# Open Data Day: Open Collaboration With Open Data {#OOD}
+
+- [&#11206; Open Collaboration](#open-collaboration) is an originally scientific method inspired by the open source software community. It encourages the small contributions with independent components with incentives and transparency. We believe that open collaboration is particularly useful in segmented domains, such as music and the creative industries, or startups, because it enables smaller organizations to utilize high-quality R&D products. Ideally, it make it possible to get involved with any amount of time, budget and interest available. 
+
+- [&#11206; Open Policy Analysis](#OPA) is a new standard that wants to increase the quality and transparency of evidence-based policy-making.  It builds upon open data, open source data processing and reproducible research. 
+
+- [&#11206; Case Study: Creating Valuable Open Data Assets](#casestudy) we will discuss the creation of two, scientifically valid open data assets, we will put them on a map, and then turn to scaling this process up [&#11208; Open Data Day: Open Data And Data Observatories](#observatories)!
+
+## Open Collaboration {#open-collaboration} 
+
+The Open Science Collaboration (OSC) involves continuously refining the following practices and executing projects:
+
+1. modularize: split up the tasks into independent components, 
+2. encourage small contributions, 
+3. develop a well-structured information commons, and 
+4. maintain individual incentives to participate. These lower the barriers to entry for new contributors, and maximize the range of expertise input potential. Individuals should see that getting involved in a project can be done easily, even if the project is underway. Ideally, it should be possible to make meaningful contributions with whatever time and interest is available. 
+
+## Open Policy Analysis {#OPA}
+
+OPA is based on the following principles:
+
+1. Open output: The analysis should clearly pre-specify the output that will inform policy makers, and identify the preferred set of estimates. Additionally, this principle entails properly communicating the underlying uncertainty and how the results vary with the underlying assumptions.
+2. Open analysis: All elements of the analysis should be easily accessible and readable for critical appraisal and improvement. This includes disclosing all methodological procedures and underlying assumptions behind the report.
+3. Open materials: All materials (raw data, code, and supporting documents) should be made publicly available to allow a policy report to be reproduced in its entirety with minimal effort.
+
+## Case Study: Creating Valuable Open Data Assets {#casestudy}
+
+1. We are going to create new statistical indicators with our [retroharmonize](https://retroharmonize.dataobservatory.eu/) and [regions](https://regions.dataobservatory.eu/) open source software.
+2. We will put it on a map.
+3. And publish the results as documented, open data!
+
+<!-------------------  Open Collaboration  ----------------------> 
+
+# Open Data Day: Open Data And Data Observatories {#observatories}
+
+- Observatories are permanent observation and data collection points. In the past centuries, they usually referred to a brick-and-mortar building where observation data was collected. In the Internet age, data observatories are online platforms that systematically and permanently collect research data.
+
+- [&#11206; Data observatories](#rationale) have been recognized and promoted by the EU, OECD and UNESCO as a good way to foster business-science-policy cooperation to maintain long-term data collection programs and ensure the best utilization. We believe that reproducible science and research automation can make data observatories better, cheaper and more reliable.
+
+- The Proposal for the [Data Governance Act](https://ec.europa.eu/digital-single-market/en/news/proposal-regulation-european-data-governance-data-governance-act) of the European Union shakes up both the open data regulation and data sharing. It makes many cases of data sharing a regulated activity, which may have unintended consequences for existing data observatories and generally start-ups and small organizations. 
+
+- The EU wants to encourage [&#11206; data altruism](#data-altruism), the use of data made available voluntarily by data subjects based on their consent or, where it concerns non-personal data, made available by legal persons, for purposes of general interest. Our guest is [Nicoleta Cherciu](https://www.linkedin.com/in/nicoleta-cherciu-70161b93/), Research Fellow on the Regulation of Robotics and AI.
+
+## Data Observatories: Big Data & Small Organizations {#rationale}
+
+ 
+- `Permanent data collection`:  in social and natural sciences alike, many scientific discoveries, hypothesis testing, or scientific proofs require consistent data collected over a longer period. Only the largest, usually public institutions have the organizational capacity and budget to organize such a data collection program. 
+
+- `Funding cooperation`:  a long-term data collection program has many advantages for all scientific, policy or business uses, and offers many cost savings, but requires eventually some basic funding.  Almost all the data observatories that we have reviewed receive some sort of public funding, and the ones that ceased to exist usually stopped their data collection program because of the availability of further public funds.  Nevertheless, some sort of co-funding from participants or users is usually present.
+
+- `Better value for money`:  the 17-years old European open data regime recognized that the value for money in most of the data investments can be significantly improved by data sharing and reuse. Experience tells that most publicly collected datasets are only exploited in a small fraction for the primary, first use, but they can provide value for businesses, researchers or the public sector when reused.
+
+- `Organization`: In social or economics sciences, often an hoc large cross-sectional data collection, such as an international comparative data collection, requires significant organizational investments, and this is even more the invest into longitudinal data collection that repeats regularly or irregularly over time.  A permanent observatory structure, as an institution or a partnership of institutions is necessary for complex, longitudinal data collection. This can be provide by a multi-disciplinary team of domain experts, statisticians, data scientists, engineers and computer scientists.
+
+
+## Data Sharing & Data Altruism {#data-altruism}
+
+- The European Commission's proposal for the [Data Governance Act](https://ec.europa.eu/digital-single-market/en/news/proposal-regulation-european-data-governance-data-governance-act) wants to encourage data altruism with the introduction of new regulation and the registry of ‘Data Altruism Organisations recognised in the Union’. What kind of data is affected by this regulatory proposal?
+
+- How will this affect existing data observatories, such as the [European Alternative Fuels Observatory](https://www.eafo.eu/), the [EUIPO Observatory](https://euipo.europa.eu/ohimportal/en/web/observatory/home)
+, the [European Observatory on Homelessness](https://www.feantsaresearch.org/) or the [Wine Market Observatory](https://ec.europa.eu/info/food-farming-fisheries/farming/facts-and-figures/markets/overviews/market-observatories/wine_en), to name a few very different observatories within the European Union?
+
+- How should planned data observatories, like the [European Music Observatory](https://music.dataobservatory.eu/), or the [European Digital Media Observatory](https://edmo.eu/) prepare for these opportunities and potential constraints?
+
+<!------------------- Blog Posts  ----------------------> 
+
+# Blog posts {#blog}
+
+We are going to publish a few blogposts during the week as a run-up to our conversations.
+
+- [Save The Date: Open Data Day 2021 on 6th March](https://dataandlyrics.com/post/2021-02-03-save-the-date-odd/)
+- [Ensuring the Visibility and Accessibility of European Creative Content on the World Market: The Need for Copyright Data Improvement in the Light of New Technologies](https://dataandlyrics.com/post/2021-02-13-european-visibility/)
+
+
+<!-------------------  Participants  ----------------------> 
+
+# OOD'21 Collaborators {#contact}
+
+Get in touch:
+
+- Al Shaibani, Ahmed: [linkedin](https://www.linkedin.com/in/ahmedalshaibani/) - retrospective survey harmonization, Arabbarometer.
+- Antal, Daniel: [danielantal.eu](https://danielantal.eu/) - [linkedin](https://www.linkedin.com/in/antaldaniel/) - [github](https://github.com/antaldaniel) - interested in open collaboration 
+- Cherciu, Nicoleta: [linkedin](https://www.linkedin.com/in/nicoleta-cherciu-70161b93/), Research Fellow on the Regulation of Robotics and AI.
+- Clarke H., Emily: digital humanities, music
+- Maillard, Robin: [linkedin](https://www.linkedin.com/in/robin-maillard-444211142/) - harmonized surveys, reproducible research
+- Garcia Molína, Andrés: data science and music.
+- Ibrahim, Yousef: [linkedin](https://www.linkedin.com/in/yousef-ibrahim-185370123/) - retrospective survey harmonization, Arabbarometer.
+- Popovic, Milos:  [https://milosp.info/](https://milosp.info/) - [linkedin](https://www.linkedin.com/in/milos-popovic-89778117/) - geographical information, data visualization.
+- Vitos, Boti: [linkedin](https://www.linkedin.com/in/botondvitos/) - music and data science.
+
+See you on 6th March 2021.
